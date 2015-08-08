@@ -1,3 +1,4 @@
+/* General */
 * {
 	font-family: "PT Sans", sans-serif;
 }
@@ -13,185 +14,8 @@ video {
 	padding: 40px 20px 40px 20px;
 }
 
-.red {
-	background-color: #e6001c;
-}
-
-.red a,
-.red p,
-.red .glyphicon,
-.red .date-text {
-	color: #fff;
-}
-
-/* Header */
-header {
-	border-top: 50px solid #000;
-	background-image: url(../images/header_background.jpg) !important;
-	background-repeat: repeat-y;
-}
-
-.biopic {
-	margin: 0px 20px 20px 0px;
-	padding: 0;
-}
-
-#name {
-	color: #e6001c;	
-	font-weight: bold;
-	font-size: 50px;
-	line-height: 1em;
-}
-
-.role {
-	font-size: 23px;
-	padding: 0;
-	line-height: 1.2em;
-	font-style: italic;
-}
-
-.welcome-message {
-  font-size: 15px;
-  color: #666;
-  line-height: 28px;
-	padding: 0;
-}
-
-#skills-box {
-  background-color: #000;
-}
-
-
-
-.online-entry,
-.education-entry,
-.work-entry {
-  padding: 10px 0 10px 0;
-border-bottom: 1px solid black;
-}
-
-.online-entry:last-of-type,
-.education-entry:last-of-type,
-.work-entry:last-of-type,
-.project-entry:last-of-type {
-  padding: 10px 0 10px 0;
-border: 0px !important;
-}
-
-h1 {
-  font-size: 40px;
-  color: #f5a623;
-  line-height: 48px;
-}
-
-
-h3 {
-  font-style: italic;
-  font-size: 20px;
-  color: #000;
-  line-height: 22px;
-}
-
-h4 {
-  font-weight: bold;
-  font-size: 14px;
-  color: #4a4a4a;
-  line-height: 17px;
-}
-
-h3,
-h4,
-h5 {
-  padding:10px 5%;
-
-}
-
-
-.date-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999;
-  line-height: 16px;
-  float: left;
-}
-
-.location-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999;
-  line-height: 16px;
-  float: right;
-
-}
-
-p {
-  font-size: 14px;
-  color: #333;
-  line-height: 21px;
-}
-
-a {
-  color: #1199c3;
-  text-decoration: none;
-  margin-top: 10px;
-}
-
-
-
-.orange {
-  background-color: #f5ae23;
-}
-
-.orange-text {
-  color: #f5ae23;
-}
-
-.white-text {
-  font-weight: bold;
-  color: #fff;
-}
-
-/* TODO: Replace with image later */
-.center-content {
-  padding: 2.5% 5%;
-}
-
-ul {
-  list-style-type: none;
-}
-
-img {
-  padding: 10px;
-}
-
-span {
-  padding: 5px;
-}
-
-#lets-connect {
-  text-align: center;
-}
-
-#map {
-  height: 100%;
-  margin: 0 5%;
-}
-
-#mapDiv {
-  height: 400px;
-  width: 100%;
-  padding-bottom: 5%;
-}
-
-
-/* Base Styles */
-p {
-	font-size: 16px;
-	line-height: 1.4em;
-}
-
 h2 {
-	font-size: 30px;
+	font-size: 35px;
 	text-transform: uppercase;
 	color: #000;
 	font-weight: bold;
@@ -205,130 +29,279 @@ h3 {
 	margin: auto auto 15px auto;
 }
 
-h3 span {
-	font-size: 12px;
-	font-weight: bold;
-	color: #e6001c;
-	padding: 0 0 0 3px;
-}
-
-h3 b {
-	font-size: 14px;
-	color: #e6001c;
-	display: block;
-}
-
-h3 strong {
-	padding: 10px 0 0 10px !important;
-	display:flex;
-}
-
-.title  {
-	font-weight: normal;
-	font-size: 19px;
-	color: #666;
-	padding: 10px;
-	margin: 0 0 10px 0;
-	display:block;
-}
-
 .icon {
-	-webkit-border-radius: 40px;
-	-moz-border-radius: 40px;
-	-ms-border-radius: 40px;
-	border-radius: 40px;
-	background-color: #000;
-	width: 40px;
-	height: 40px;
-	display: block;
-	float: left;
-	text-align: center;
-	justify-content: center;
-	display: flex;
+	margin: 0 20px 0 0;
 }
 
-.btn-more,
-.btn-more:hover,
-.btn-more:focus {
-	margin: 15px 0 0 0;
+.flex-box {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+
+ul {
+  list-style-type: none;
+}
+
+
+/* Red */
+.red {
+	background-color: #e6001c;
+}
+
+.red h2 {
 	color: #000;
-	font-size: 15px;
-	display: block;
-	float: left;
-	padding: 5px 10px 5px 10px;
 }
 
-.btn-more:hover {
-	background-color: #000;
+.red a,
+.red p,
+.red .glyphicon,
+.red .date-text {
 	color: #fff;
-	text-decoration: none;
 }
 
-.btn-more .glyphicon {
-	font-size: 11px;
+/* Black */
+.black {
+  color: #fff;
+  background-color: #000;
 }
 
-.item {
-	margin: 0 0 20px 0;
+.black h2 {
+	color: #ccc;
+}
+.black a {
+	color: #fff !important;
+	text-decoration: underline !important;
+}
+.black a:hover {
+	color: #e6001c !important;
+}
+
+/* Header */
+header {
+	border-top: 50px solid #000;
+	background-image: url(../images/header_background.jpg) !important;
+	background-repeat: repeat-y;
+}
+
+.biopic {
+	width: 100vh;
+	height: 50vh;
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	margin: 0px 20px 20px 0px;
+}
+
+#name {
+	color: #e6001c;	
+	font-weight: bold;
+	font-size: 60px;
+	line-height: 1em;
+}
+
+.role {
+	font-size: 28px;
+	padding: 0;
+	line-height: 1.2em;
+	font-style: italic;
+}
+
+.welcome-message {
+  font-size: 20px;
+  color: #666;
+  line-height: 1.8em;
+	padding: 0;
+}
+
+/* Skills */
+#skills .flex-item {
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: 20px 20px 0 0 !important;
+}
+
+/* General Sections */
+.online-entry,
+.education-entry,
+.work-entry {
+padding: 10px 0 10px 0;
+border-bottom: 1px solid black;
+}
+
+.online-entry:last-of-type,
+.education-entry:last-of-type,
+.work-entry:last-of-type,
+.project-entry:last-of-type {
+border: 0px !important;
+}
+
+/* Mixed Sections */
+.work-entry,
+.education-entry {
+border-bottom: 1px dashed #90000d;
+}
+
+.work-entry .link,
+.education-entry .link,
+.online-entry .link {
+font-weight: normal;
+color: #fff;
+font-size: 25px;
+}
+
+.work-entry .employer,
+.education-entry .school {
+color:#f7c2c5;
+text-transform: uppercase;
+font-weight: bold;
+font-size: 16px;
+}
+
+.work-entry .link:hover,
+.education-entry .link:hover {
+text-decoration: none;
+}
+
+.project-entry .date-text,
+.online-entry .date-text,
+.work-entry .date-text {
+font-size: 18px;
+color: #90000d;
+font-style: italic;
+}
+
+.project-entry .date-text,
+.online-entry .date-text {
+color: #e6001c;
 }
 
 /* Work */
-.work-section .container {
-	margin: 60px auto auto auto;
+.work-entry .description {
+font-size: 18px;
+color: #000 !important;
 }
 
-.work-section .portfolio {
-	margin: auto auto 50px auto;
+/* Project */
+.project-entry {
+	margin: 30px 0 0 0;
 }
 
-.work-section .box-item,
-.work-section .box-item:hover,
-.work-section .box-item:focus {
-	padding: 0;
-	margin: 0 0 20px 0;
-	text-decoration: none;
-	display:block;
+.project-entry .date-text {
+font-style: normal;
 }
 
-.work-section .box-item:hover,
-.work-section .box-item:focus {
-	background-color: #ededed;
+.project-entry .description {
+margin-top: 15px;
+font-size: 16px;
+color: #666 !important;
 }
 
-/* Footer */
-footer {
-	background-color: #000;
+/* Education */
+.education-entry .date-text {
+font-size: 18px;
+color: #90000d;
 }
 
-.footer-container {
-	padding: 20px;
-	color: #fff;
+.education-entry .major {
+font-weight: bold;
+font-size: 30px;
+color: #000 !important;
+}
+
+/* Online Courses*/
+.online-entry {
+	border-bottom: 1px dashed #ccc;
+}
+
+.online-entry .link {
+color: #e6001c;
+font-weight: bold;
+}
+
+.online-entry .school {
+color: #000;
+font-size: 14px;
+font-weight: bold;
+}
+
+.online-entry .date-text {
+color: #666;
+font-size: 14px;
+font-weight: normal;
+}
+
+/* Map */
+#map {
+  height: 100%;
+  margin: 0;
+}
+
+#mapDiv {
+  height: 500px;
+  width: 100%;
 }
 
 /* Medium Screens */
 @media screen and (min-width: 768px) and (max-width: 991px) {
+	#name {
+		font-size: 50px;
+	}	
+	.role {
+		font-size: 23px;
+	}
+
+	.welcome-message {
+	  font-size: 16px;
+	}	
+	
 	header {
 		background-image: url(../images/header_background_medium.jpg) !important;
+	}
+	
+	.biopic {
+		height: 50vh;
 	}
 
 	#headerTxt {
 		padding: 0 0 0 160px;
-	}	
+	}
+		
 }
 
 /* Small Screens */
 @media screen and (max-width: 767px) {
+	#name {
+		font-size: 40px;
+	}	
+	.role {
+		font-size: 20px;
+	}
+
+	.welcome-message {
+	  font-size: 16px;
+	}
+		
 	header {
 		background-image: url(../images/header_background_small.jpg) !important;
-	}	
+	}
+		
+	.biopic {
+		height: 35vh;
+	}
 	
 	#headerTxt {
 		padding: 0 0 0 80px;
 	}
-
-	.work-section .title {
-		border-bottom: 1px dashed #dedede;
-	}
-
+	
+	.project-entry {
+		padding: 0 0 20px 0;
+		border-bottom: 1px dashed #999;
+	}	
 }
 

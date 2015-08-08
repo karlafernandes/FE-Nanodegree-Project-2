@@ -3,12 +3,12 @@ var bio = {
 	"name" : "Karla Fernandes",
 	"role" : "Designer Graphic/Web & Front-End Developer",
 	"contacts" : {
-		"mobile" : "+55 61 4042 0613 | +41 44 585 2979",
+		"mobile" : "+55 61 4042 0613",
 		"email" : "karla@vitaminak.com.br",
 		"skype" : "karla.fernandes",
 		"github" : "karlafernandes",
 		"twitter" : "karlafernandes",
-		"location" : "Brasília, Brazil",
+		"location" : "Worldwide",
 		"blog" : "vitaminak.com.br"
 	},
 	"places" : ["Buenos Aires, Argentina", "Luzern, Swtizerland", "Berlin, Germany", "Paris, France", "Marrakesh, Morroco"],	
@@ -33,11 +33,12 @@ bio.display = function() {
 	$("#header").append(formattedImage, internationalizeButton);
 	$("#headerTxt").prepend(formattedRole).prepend(formattedName).append(formattedMessage);
 	$("#skills-box").append(HTMLskillsStart);
-	for(skill in bio.skills) {
+	for(var skill in bio.skills) {
 		var formattedSkills = HTMLskills.replace("%data%", bio.skills[skill]);
 		$("#skills").append(formattedSkills);
 	};
-	$("#footerContacts").append(formattedMobile,formattedEmail,formattedSkype, formattedGithub, formattedTwitter, formattedPortfolio, formattedLocation);
+	$("#footerContacts").append(formattedMobile,formattedEmail,formattedSkype);
+	$("#footerContacts2").append(formattedGithub, formattedTwitter, formattedPortfolio);
 	
 };
 
@@ -102,7 +103,7 @@ var education = {
 };
 
 education.display = function() {
-	for(school in education.schools) {
+	for(var school in education.schools) {
 		var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name).replace("#", education.schools[school].url);
 		var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
 		var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
@@ -110,15 +111,16 @@ education.display = function() {
 		var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
 				
 		$("#education").append(HTMLschoolStart);
-		$(".education-entry:last").append(formattedName + formattedDegree, formattedDates, formattedLocation, formattedMajor);
+		$(".education-entry:last").append(formattedLocation + formattedDates, formattedName + formattedDegree, formattedMajor);
+		
 	}
-	for(course in education.online) {		
+	for(var course in education.online) {		
 		var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.online[course].title).replace("#", education.online[course].url);
 		var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.online[course].school);
 		var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.online[course].dates);
 		
 		$("#online").append(HTMLonlineStart);
-		$(".online-entry:last").prepend(formattedOnlineTitle, formattedOnlineDates, formattedOnlineSchool);
+		$(".online-entry:last").prepend(formattedOnlineTitle, formattedOnlineSchool + formattedOnlineDates);
 	}	
 };
 
@@ -172,7 +174,7 @@ var work = {
 };
 
 work.display = function() {
-	for(job in work.jobs) {		
+	for(var job in work.jobs) {		
 		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
 		var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
 		var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
@@ -208,19 +210,20 @@ var projects = {
 };
 
 projects.display = function(){
-	for(item in projects.project){
+	for(var item in projects.project){
 		$("#projects").append(HTMLprojectStart);
 		var formattedTitle = HTMLprojectTitle.replace("%data%", projects.project[item].title);
 		var formattedDates = HTMLprojectDates.replace("%data%", projects.project[item].dates);
 		var formattedDescription = HTMLprojectDescription.replace("%data%",projects.project[item].description);
 		
-		$(".project-entry:last").append(formattedDates, formattedTitle, formattedDescription);
+		$(".project-entry:last").append(formattedDates, formattedTitle);
 		for (image in projects.project[item].images) {
 			// I would like to use something smarter that could replace all the strings once
 			var formattedImage = HTMLprojectImage.replace("%data%", projects.project[item].images[image]).replace("%data%", projects.project[item].images[image]).replace("%data%", projects.project[item].images[image]).replace("%data%", projects.project[item].images[image]).replace("%data%", projects.project[item].images[image]);
 			//console.log(formattedImage);
 			$(".project-entry:last").append(formattedImage);
 		};
+		$(".project-entry:last").append(formattedDescription);
 	}
 };
 projects.display();
