@@ -31,20 +31,20 @@ var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></
 
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<a href="#">%data%';
-var HTMLworkTitle = ' &raquo; %data%</a>';
+var HTMLworkTitle = ' <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> %data%</a>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
-var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectTitle = '<a href="#">%data%</a>';
-var HTMLprojectDates = '<div class="date-text">%data%</div>';
-var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img src="%data%">';
+var HTMLprojectStart = '<div class="project-entry item col-md-4 col-sm-4"></div>';
+var HTMLprojectTitle = '<h3 class="title">%data%<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></h3>';
+var HTMLprojectDates = '<b>%data%</b>';
+var HTMLprojectDescription = '<div class="date-text">%data%</div>';
+var HTMLprojectImage = '<picture><source media="(max-width: 500px)" srcset="images/%data%_small.jpg" /><source media="(min-width: 501px)" srcset="images/%data%_medium.jpg" /><img src="images/%data%_small.jpg"  srcset="images/%data%_small.jpg 1x, images/%data%.jpg 2x" class="img-responsive" alt="" /></picture>';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
-var HTMLschoolDegree = ' &raquo; %data%</a>';
+var HTMLschoolDegree = ' <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> %data%</a>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em><br>Major: %data%</em>';

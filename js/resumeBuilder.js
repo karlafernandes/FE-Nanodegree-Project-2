@@ -185,19 +185,19 @@ var projects = {
 		"title" : "DB-Beauty Services",
 		"dates" : "Mai 2015", 
 		"description" : "Graphic Design: Flyer, Ilustrator.", 
-		"images" : ["images/work1_small.jpg","images/work1_2_small.jpg"]
+		"images" : ["work1"]
 	},
 	{
 		"title" : "Image+ Christmas",
 		"dates" : "November 2014", 
 		"description" : "Graphic Design: Flyer, Ilustrator.", 
-		"images" : ["images/work2_small.jpg"]
+		"images" : ["work2"]
 	},
 	{
 		"title" : "WTS Courses",
 		"dates" : "July 2014", 
 		"description" : "Graphic Design: Flyer, Ilustrator.", 
-		"images" : ["images/work3_small.jpg"]
+		"images" : ["work3"]
 	}]
 };
 
@@ -208,9 +208,11 @@ projects.display = function(){
 		var formattedDates = HTMLprojectDates.replace("%data%", projects.project[item].dates);
 		var formattedDescription = HTMLprojectDescription.replace("%data%",projects.project[item].description);
 		
-		$(".project-entry:last").append(formattedTitle, formattedDates, formattedDescription);
+		$(".project-entry:last").append(formattedDates, formattedTitle, formattedDescription);
 		for (image in projects.project[item].images) {
-			var formattedImage = HTMLprojectImage.replace("%data%", projects.project[item].images[image]);
+			// I would like to use something smarter that could replace all the strings once
+			var formattedImage = HTMLprojectImage.replace("%data%", projects.project[item].images[image]).replace("%data%", projects.project[item].images[image]).replace("%data%", projects.project[item].images[image]).replace("%data%", projects.project[item].images[image]).replace("%data%", projects.project[item].images[image]);
+			console.log(formattedImage);
 			$(".project-entry:last").append(formattedImage);
 		};
 	}

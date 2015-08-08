@@ -12,6 +12,14 @@
 	<title>Karla Fernandes | Vitamina K</title>
 	<!--link rel="stylesheet" href="http://normalize-css.googlecode.com/svn/trunk/normalize.css" /-->
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:700,400" />
+	
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+
+	<!-- Bootstrap -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" defer></script>
+	<script src="js/bootstrap.min.js" defer></script>	
 
 <!-- Custom CSS -->
 <link rel="stylesheet" href="css/style.css" />
@@ -26,65 +34,65 @@
 <link rel="apple-touch-icon" href="images/brand_icon.jpg" />
 
 </head>
-<body>
-  <div id="main">
-    <div id="header" class="center-content clear-fix">
-      <ul id="topContacts" class="flex-box"></ul>
-    </div>
-    <div style="clear: both;"></div>
-    <div id="workExperience" class="gray">
-      <h2>Work Experience</h2>
-    </div>
-    <div id="projects">
-      <h2>Projects</h2>
-    </div>
-    <div id="education" class="gray">
-      <h2>Education</h2>
-    </div>
-    <div id="online">
-      <h2>Online Courses</h2>
-    </div>
-    <div id="mapDiv" class="gray">
-      <h2>Where I've Lived and Worked</h2>
-    </div>
-    <div id="lets-connect" class="dark-gray">
-      <h2 class="orange center-text">Let's Connect</h2>
-        <ul id="footerContacts" class="flex-box">
-      </ul>
-    </div>
-  </div>
+<body id="main">
+	<header>
+		<div class="container-fluid">
+			<div class="row">
+				<div id="header" class="col-md-12">
+					<ul id="topContacts" class="flex-box"></ul>
+				</div>
+			</div>
+		</div>			
+	</header>
+	<main>
+		<div class="container-fluid">
+			<div class="row gray">
+				<div id="workExperience" class="col-md-12">
+					<h2>Experience</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div id="projects" class="col-md-12">
+					<h2>Featured Work</h2>
+					<h4>For more visit my portfolio online: </h4>
+				</div>
+			</div>
+			<!-- Featured Work -->
+			<div class="row">
+				
+			</div>
+			<div class="row gray">
+				<div id="education" class="col-md-12">
+					<h2>Education</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div id="online" class="col-md-12">
+					<h2>Online Courses</h2>
+				</div>
+			</div>
+			<div class="row gray">
+				<div id="mapDiv" class="col-md-12">
+			      	<h2>Where I've Lived and Worked</h2>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer id="lets-connect" class="dark-gray">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+	      			<h2 class="orange center-text">Let's Connect</h2>
+	        		<ul id="footerContacts" class="flex-box"></ul>
+				</div>
+			</div>
+	    </div>
+	</footer>
 
-  <!--
-  The next line tells the browser where to download the JavaScript file you'll be
-  writing. In resumeBuilder.js, you'll be writing code that builds the resume
-  dynamically when this website, index.html, is opened.
-  -->
+  <!-- Code that builds the resume dynamically -->
   <script src="js/resumeBuilder.js"></script>
 
-
-  <!--
-  These scripts are written in JavaScript. You'll be breaking them down as part of
-  a quiz. Essentially, the next few lines are checking to see if you have not
-  changed each section of the resume. If you have not made any changes to a section
-  of the resume, then that part of the resume does not show up. More on this in the
-  course.
-  -->
-
   <script type="text/javascript">
-    // Notice how all of a sudden there's JavaScript inside this HTML
-    // document? You can write JavaScript between <script> tags. At the end of your
-    // JavaScript, don't forget the closing script tag with the slash (/).
-
-
-    // Also, this is a JavaScript style comment. You can comment in JavaScript with:
-
-    //   two slashes for all following characters on a single line, or
-
-    /*
-        an opening and closing set of slash asterisks for block comments.
-    */
-
-
     if(document.getElementsByClassName('flex-item').length === 0) {
       document.getElementById('topContacts').style.display = 'none';
     }
