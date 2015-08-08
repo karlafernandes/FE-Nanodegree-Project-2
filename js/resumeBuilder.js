@@ -1,7 +1,7 @@
 /* BIO */
 var bio = {
 	"name" : "Karla Fernandes",
-	"role" : "Designer Grafic/Web & Front-End Developer",
+	"role" : "Designer Graphic/Web & Front-End Developer",
 	"contacts" : {
 		"mobile" : "+55 61 4042 0613 | +41 44 585 2979",
 		"email" : "karla@vitaminak.com.br",
@@ -30,8 +30,9 @@ bio.display = function() {
 	var formattedImage = HTMLbioPic.replace("%data%", bio.bioPic);
 	var formattedMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 	
-	$("#header").prepend(formattedRole, internationalizeButton).prepend(formattedName).append(formattedImage, formattedMessage);
-	$("#header").append(HTMLskillsStart);
+	$("#header").append(formattedImage, internationalizeButton);
+	$("#headerTxt").prepend(formattedRole).prepend(formattedName).append(formattedMessage);
+	$("#skills-box").append(HTMLskillsStart);
 	for(skill in bio.skills) {
 		var formattedSkills = HTMLskills.replace("%data%", bio.skills[skill]);
 		$("#skills").append(formattedSkills);
@@ -63,22 +64,10 @@ var education = {
 	}],
 	"online" : [
 	{
-		"title" : "Zope Techinical Solutions",
-		"school" : "Simples Consultoria",
-		"dates" : 2005,
-		"url" : "http://zope.org"
-	},
-	{
-		"title" : "User Experience for the Web",
-		"school" : "Open2Study by Amir Ansari",
-		"dates" : 2013,
-		"url" : "https://www.open2study.com/node/75"
-	},
-	{
-		"title" : "Writing for the Web",
-		"school" : "Open2Study by Frankie Madden",
-		"dates" : 2013,
-		"url" : "https://www.open2study.com/node/76"
+		"title" : "Front-End Web Developer Nanodegree",
+		"school" : "Udacity",
+		"dates" : 2015,
+		"url" : "https://www.udacity.com/course/nd001"
 	},
 	{
 		"title" : "Online Advertising",
@@ -87,10 +76,28 @@ var education = {
 		"url" : "https://www.open2study.com/node/195"
 	},
 	{
-		"title" : "Front-End Web Developer Nanodegree",
-		"school" : "Udacity",
-		"dates" : 2015,
-		"url" : "https://www.udacity.com/course/nd001"
+		"title" : "Writing for the Web",
+		"school" : "Open2Study by Frankie Madden",
+		"dates" : 2013,
+		"url" : "https://www.open2study.com/node/76"
+	},	
+	{
+		"title" : "User Experience for the Web",
+		"school" : "Open2Study by Amir Ansari",
+		"dates" : 2013,
+		"url" : "https://www.open2study.com/node/75"
+	},
+	{
+		"title" : "User Experience for the Web",
+		"school" : "Open2Study by Amir Ansari",
+		"dates" : 2013,
+		"url" : "https://www.open2study.com/node/75"
+	},				
+	{
+		"title" : "Zope Techinical Solutions",
+		"school" : "Simples Consultoria",
+		"dates" : 2005,
+		"url" : "http://zope.org"
 	}]
 };
 
@@ -106,13 +113,12 @@ education.display = function() {
 		$(".education-entry:last").append(formattedName + formattedDegree, formattedDates, formattedLocation, formattedMajor);
 	}
 	for(course in education.online) {		
-		var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.online[course].title);
+		var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.online[course].title).replace("#", education.online[course].url);
 		var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.online[course].school);
 		var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.online[course].dates);
-		var formattedOlineUrl = HTMLonlineTitle.replace("#", education.online[course].url);
 		
 		$("#online").append(HTMLonlineStart);
-		$(".online-entry:first").prepend(formattedOnlineTitle, formattedOnlineDates, formattedOnlineSchool);
+		$(".online-entry:last").prepend(formattedOnlineTitle, formattedOnlineDates, formattedOnlineSchool);
 	}	
 };
 
@@ -123,10 +129,10 @@ var work = {
 	"jobs" : [
 	{
 		"employer" : "Vitamina K", 
-		"title" : "Designer Grafic/Web & Front-End Developer",
+		"title" : "Designer Graphic/Web & Front-End Developer",
 		"location" : "Brasília, Brazil",		
 		"dates" : "January 2006 - Current",
-		"description" : "Managing Partner, Freelance Designer Grafic/Web & Front-End Developer."
+		"description" : "Managing Partner, Freelance Designer Graphic/Web & Front-End Developer."
 	},	
 	{
 		"employer" : "Chamber of Deputies [Soma Soluções]", 
@@ -212,7 +218,7 @@ projects.display = function(){
 		for (image in projects.project[item].images) {
 			// I would like to use something smarter that could replace all the strings once
 			var formattedImage = HTMLprojectImage.replace("%data%", projects.project[item].images[image]).replace("%data%", projects.project[item].images[image]).replace("%data%", projects.project[item].images[image]).replace("%data%", projects.project[item].images[image]).replace("%data%", projects.project[item].images[image]);
-			console.log(formattedImage);
+			//console.log(formattedImage);
 			$(".project-entry:last").append(formattedImage);
 		};
 	}
@@ -230,10 +236,10 @@ function inName(name){
 	
 	if (lastName == lastName.toUpperCase()) {
 		newName = firstName + " " + lastName.charAt(0).toUpperCase() + lastName.slice(1).toLowerCase(); 
-		$("button").text("Internationalize");
+		$("#btInt").text("Internationalize");
 	} else {
 		newName = firstName + " " + lastName.toUpperCase();
-		$("button").text("Undo"); 
+		$("#btInt").text("Undo"); 
 	}
 	return newName;
 };
