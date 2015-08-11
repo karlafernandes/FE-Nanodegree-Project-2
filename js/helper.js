@@ -1,59 +1,51 @@
 /*
-
-This file contains all of the code running in the background that makes resumeBuilder.js possible. We call these helper functions because they support your code in this course.
-
-Don't worry, you'll learn what's going on in this file throughout the course. You won't need to make any changes to it until you start experimenting with inserting a Google Map in Problem Set 3.
-
-Cameron Pittman
-*/
-
-
-/*
 These are HTML strings. As part of the course, you'll be using JavaScript functions
-replace the %data% placeholder text you see in them.
+replace the '+data+' placeholder text you see in them.
 */
-var HTMLheaderName = '<h1 id="name">%data%</h1>';
-var HTMLheaderRole = '<span class="role">%data%</span><hr/>';
 
-var HTMLcontactGeneric = '<li class="flex-item"><span class="icon">%contact%</span> %data%</li>';
-var HTMLmobile = '<li class="flex-item"><span class="icon">phone</span> %data%</li>';
-var HTMLemail = '<li class="flex-item"><span class="icon">email</span><span class="white-text"><a href="mailto:%data%" target="_blank">%data%</a></span></li>';
-var HTMLtwitter = '<li class="flex-item"><span class="icon">twitter</span><span class="white-text"><a href="http://twitter.com/%data%" target="_blank">@%data%</a></span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="icon">github</span><span class="white-text"><a href="http://github.com/%data%" target="_blank">%data%</a></span></li>';
-var HTMLblog = '<li class="flex-item"><span class="icon">portfolio</span><span class="white-text"><a href="http://www.%data%" target="_blank">%data%</a></span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="icon">location</span> %data%</li>';
+var data = '%data%'
 
-//var HTMLbioPic = '<img src="%data%" class="biopic img-responsive" />';
-var HTMLbioPic = '<div style="background-image:url(%data%);" class="biopic img-responsive"></div>';
-var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
+var HTMLheaderName = '<h1 id="name">'+data+'</h1>';
+var HTMLheaderRole = '<span class="role">'+data+'</span><hr/>';
 
+var HTMLcontactGeneric = '<li class="flex-item"><span class="icon">%contact%</span> '+data+'</li>';
+var HTMLmobile = '<li class="flex-item"><span class="icon">phone</span> '+data+'</li>';
+var HTMLemail = '<li class="flex-item"><span class="icon">email</span><span class="white-text"><a href="mailto:'+data+'" target="_blank">'+data+'</a></span></li>';
+var HTMLtwitter = '<li class="flex-item"><span class="icon">twitter</span><span class="white-text"><a href="http://twitter.com/'+data+'" target="_blank">@'+data+'</a></span></li>';
+var HTMLgithub = '<li class="flex-item"><span class="icon">github</span><span class="white-text"><a href="http://github.com/'+data+'" target="_blank">'+data+'</a></span></li>';
+var HTMLblog = '<li class="flex-item"><span class="icon">portfolio</span><span class="white-text"><a href="http://www.'+data+'" target="_blank">'+data+'</a></span></li>';
+var HTMLlocation = '<li class="flex-item"><span class="icon">location</span> '+data+'</li>';
+
+//var HTMLbioPic = '<img src="'+data+'" class="biopic img-responsive" />';
+var HTMLbioPic = '<div style="background-image:url('+data+');" class="biopic img-responsive"></div>';
+var HTMLwelcomeMsg = '<span class="welcome-message">'+data+'</span>';
 var HTMLskillsStart = '<ul id="skills" class="flex-box"></ul>';
-var HTMLskills = '<li class="flex-item">%data%</li>';
+var HTMLskills = '<li class="flex-item">'+data+'</li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<a href="#" class="link"><span class="employer">%data%</span>';
-var HTMLworkTitle = ' <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> %data%</a>';
-var HTMLworkDates = '<div class="date-text">%data%</div>';
-var HTMLworkLocation = '<div class="location-text">%data%</div>';
-var HTMLworkDescription = '<p class="description">%data%</p>';
+var HTMLworkEmployer = '<a href="#" class="link"><span class="employer">'+data+'</span>';
+var HTMLworkTitle = ' <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> '+data+'</a>';
+var HTMLworkDates = '<div class="date-text">'+data+'</div>';
+var HTMLworkLocation = '<div class="location-text">'+data+'</div>';
+var HTMLworkDescription = '<p class="description">'+data+'</p>';
 
 var HTMLprojectStart = '<div class="project-entry col-md-4 col-sm-4"></div>';
-var HTMLprojectTitle = '<h3 class="title">%data%<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></h3>';
-var HTMLprojectDates = '<b class="date-text">%data%</b>';
-var HTMLprojectDescription = '<p class="description">%data%</p>';
-var HTMLprojectImage = '<picture><source media="(max-width: 500px)" srcset="images/%data%_small.jpg" /><source media="(min-width: 501px)" srcset="images/%data%_medium.jpg" /><img src="images/%data%_small.jpg"  srcset="images/%data%_small.jpg 1x, images/%data%.jpg 2x" class="img-responsive" alt="" /></picture>';
+var HTMLprojectTitle = '<h3 class="title">'+data+'<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></h3>';
+var HTMLprojectDates = '<b class="date-text">'+data+'</b>';
+var HTMLprojectDescription = '<p class="description">'+data+'</p>';
+var HTMLprojectImage = '<a href="#" data-toggle="modal" data-target="#'+data+'"><picture><source media="(max-width: 500px)" srcset="images/'+data+'_small.jpg" /><source media="(min-width: 501px)" srcset="images/'+data+'_medium.jpg" /><img src="images/'+data+'_small.jpg"  srcset="images/'+data+'_small.jpg 1x, images/'+data+'.jpg 2x" class="img-responsive" alt="" /></picture></a>';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
-var HTMLschoolName = '<a href="#" class="link"><span class="school">%data%</span>';
-var HTMLschoolDegree = ' <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> %data%</a>';
-var HTMLschoolDates = '<span class="location-text">%data%</span></div>';
-var HTMLschoolLocation = '<div class="date-text">%data% - ';
-var HTMLschoolMajor = '<p class="major">%data%</p>';
+var HTMLschoolName = '<a href="#" class="link"><span class="school">'+data+'</span>';
+var HTMLschoolDegree = ' <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> '+data+'</a>';
+var HTMLschoolDates = '<span class="location-text">'+data+'</span></div>';
+var HTMLschoolLocation = '<div class="date-text">'+data+' - ';
+var HTMLschoolMajor = '<p class="major">'+data+'</p>';
 
 var HTMLonlineStart = '<div class="online-entry"></div>';
-var HTMLonlineTitle = '<a href="#" class="link">%data%</a>';
-var HTMLonlineDates = ' (%data%)</span></div>';
-var HTMLonlineSchool = '<div class="school">%data% <span class="date-text">';
+var HTMLonlineTitle = '<a href="#" class="link">'+data+'</a>';
+var HTMLonlineDates = ' ('+data+')</span></div>';
+var HTMLonlineSchool = '<div class="school">'+data+' <span class="date-text">';
 
 var internationalizeButton = '<button id="btInt" type="button" class="btn btn-xs btn-danger pull-right">Internationalize</button>';
 var googleMap = '<div id="map"></div>';

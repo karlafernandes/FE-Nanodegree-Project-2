@@ -45,7 +45,7 @@
 			</div>
 			<div class="row black">
 				<div class="col-md-12">
-					<h2>Top Skills</h2>
+					<h2 class="subtitle">Top Skills</h2>
 					<div id="skills" class="flex-box"></div>
 				</div>
 			</div>
@@ -55,42 +55,113 @@
 		<div class="container-fluid">
 			<div class="row red">
 				<div id="workExperience" class="col-md-12">
-					<h2>Experience</h2>
+					<h2 class="subtitle">Experience</h2>
 				</div>
 			</div>
-			<div class="row">
-				<div id="projects" class="col-md-12">
-					<h2>Featured Work</h2>
-				</div>
+
+<!-- Modal Portfolio -->
+<div class="modal fade" id="work1" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<b class="date-text">May/2015</b>
+				<h3 class="title">DB-Beauty Services</h3>
 			</div>
-			<div class="row red">
-				<div id="education" class="col-md-12">
-					<h2>Education</h2>
-				</div>
+			<div class="modal-body">
+				<picture>
+					<source media="(max-width: 767px)" srcset="images/work1_2_medium.jpg" />
+					<source media="(min-width: 768px)" srcset="images/work1_2.jpg" />
+					<img src="images/work1_2.jpg" srcset="images/work1_2_medium.jpg 1x, images/work1_2.jpg 2x" class="img-responsive" alt="Flyer DB-Beauty Back" />
+				</picture>
+				<picture>
+					<source media="(max-width: 767px)" srcset="images/work1_medium.jpg" />
+					<source media="(min-width: 768px)" srcset="images/work1.jpg" />
+					<img src="images/work1.jpg" srcset="images/work1_medium.jpg 1x, images/work1.jpg 2x" class="img-responsive" alt="Flyer DB-Beauty Front" />
+				</picture>
 			</div>
-			<div class="row">
-				<div id="online" class="col-md-12">
-					<h2>Online Courses</h2>
-				</div>
-			</div>
-		</div>
-	</main>
-	<div id="mapDiv"></div>
-	<footer id="lets-connect" class="black">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-4">
-					<h2>Let's Connect</h2>
-				</div>
-				<div class="col-md-4">
-					<ul id="footerContacts"></ul>
-				</div>
-				<div class="col-md-4">
-					<ul id="footerContacts2"></ul>
-				</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 			</div>
 		</div>
-	</footer>
+	</div>
+</div>
+<div class="modal fade" id="work2" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<b class="date-text">November/2014</b>
+				<h3 class="title">Image+ Christmas</h3>
+			</div>
+			<div class="modal-body">
+				<picture>
+					<source media="(max-width: 767px)" srcset="images/work2_medium.jpg" />
+					<source media="(min-width: 768px)" srcset="images/work2.jpg" />
+					<img src="images/work2.jpg" srcset="images/work2_medium.jpg 1x, images/work2.jpg 2x" class="img-responsive" alt="Flyer Image+" />
+				</picture>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="work3" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<b class="date-text">July/2014</b>
+				<h3 class="title">WTS Courses</h3>
+			</div>
+			<div class="modal-body">
+				<picture>
+					<source media="(max-width: 767px)" srcset="images/work3_medium.jpg" />
+					<source media="(min-width: 768px)" srcset="images/work3.jpg" />
+					<img src="images/work3.jpg" srcset="images/work3medium.jpg 1x, images/work3.jpg 2x" class="img-responsive" alt="Flyer WTS" />
+				</picture>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div id="projects" class="col-md-12">
+		<h2 class="subtitle">Featured Work</h2>
+	</div>
+</div>
+<div class="row red">
+	<div id="education" class="col-md-12">
+		<h2 class="subtitle">Education</h2>
+	</div>
+</div>
+<div class="row">
+	<div id="online" class="col-md-12">
+		<h2 class="subtitle">Online Courses</h2>
+	</div>
+</div>
+</div>
+</main>
+<div id="mapDiv"></div>
+<footer id="lets-connect" class="black">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-4">
+				<h2 class="subtitle">Let's Connect</h2>
+			</div>
+			<div class="col-md-4">
+				<ul id="footerContacts"></ul>
+			</div>
+			<div class="col-md-4">
+				<ul id="footerContacts2"></ul>
+			</div>
+		</div>
+	</div>
+</footer>
 
 <!-- Code that builds the resume dynamically -->
 <script src="js/resumeBuilder.js"></script>

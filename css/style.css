@@ -14,7 +14,7 @@ video {
 	padding: 40px 20px 40px 20px;
 }
 
-h2 {
+.subtitle {
 	font-size: 35px;
 	text-transform: uppercase;
 	color: #000;
@@ -52,12 +52,11 @@ ul {
 	background-color: #e6001c;
 }
 
-.red h2 {
+.red .subtitle {
 	color: #000;
 }
 
 .red a,
-.red p,
 .red .glyphicon,
 .red .date-text {
 	color: #fff;
@@ -69,7 +68,7 @@ ul {
 	background-color: #000;
 }
 
-.black h2 {
+.black .subtitle {
 	color: #ccc;
 }
 .black a {
@@ -176,6 +175,7 @@ header {
 	font-style: italic;
 }
 
+.date-text,
 .project-entry .date-text,
 .online-entry .date-text {
 	color: #e6001c;
