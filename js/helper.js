@@ -62,6 +62,22 @@ $(document).ready(function() {
 	});
 });
 
+function inName(name){
+	//console.log(name);
+	var newName = name;
+	var firstName = newName.split(' ')[0];
+	var lastName = newName.split(' ')[1];
+
+	if (lastName == lastName.toUpperCase()) {
+		newName = firstName + ' ' + lastName.charAt(0).toUpperCase() + lastName.slice(1).toLowerCase();
+		$('#btInt').text('Internationalize');
+	} else {
+		newName = firstName + ' ' + lastName.toUpperCase();
+		$('#btInt').text('Undo');
+	}
+	return newName;
+};
+
 /*
 The next few lines about clicks are for the Collecting Click Locations quiz in Lesson 2.
 */

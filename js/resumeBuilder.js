@@ -1,7 +1,8 @@
-/* BIO */
-var bio = {
+// Model
+var model = {
+    bio: {
 	'name' : 'Karla Fernandes',
-	'role' : 'Designer Graphic/Web & Front-End Developer',
+	'role' : 'Graphic & Web Designer, Front-End Developer',
 	'contacts' : {
 		'mobile' : '+55 61 4042 0613',
 		'email' : 'karla@vitaminak.com.br',
@@ -11,65 +12,44 @@ var bio = {
 		'location' : 'Worldwide',
 		'blog' : 'vitaminak.com.br'
 	},
-	'places' : ['Buenos Aires, Argentina', 'Luzern, Swtizerland', 'Berlin, Germany', 'Paris, France', 'Marrakesh, Morroco'],
-	'welcomeMessage' : 'For nearly 20 years I have been working as a Designer Graphic and I created art for branding until newspapers or magazines, all kind of advertisements and print as business cards, packages, flyers and others. \n I love my work with art and have dedicated myself to Design Web since 2000 and I have remained up to date in my skills as new technologies and possibilities have evolved.  \n Before starting my own company in 2006, I gained experience in small companies, private and governamental institutions.',
-	'skills' : ['Ilustrator', 'InDesign', 'Photoshop', 'HTML5', 'CSS', 'Zope/Plone', 'Wordpress', 'Responsive Design', 'User Experience'],
+	'places' : ['Buenos Aires, Argentina', 'Luzern, Swtizerland', 'Berlin, Germany', 'Paris, France', 'Marrakesh, Morroco', 'Istanbul, Turkey'],
+	'welcomeMessage' : 'I am a Digital Nomad, and I have the gift of Creativity.\nFor the last decade, I have operated my own company, which has impacted almost every aspect of my life. I do what I love every day; creating unique solutions for clients, producing content that exceeds expectations and overcoming diverse challenges.\nTen years of independent consultation and 4 years of prior professional work has taught me the importance of staying on top of new technologies and growing with the ever-changing technologies that make responsive design and development. Learning from each project has ensured that my career continues to flourish and has helped me to grow both as a professional and as a person.\n While I would be most comfortable to work at a place which employs the technologies I am familiar with, I pick up languages and frameworks quickly and would be happy to acquire new skills and knowledge.',
+	'skills' : ['Ilustrator', 'InDesign', 'Photoshop', 'HTML5', 'CSS', 'Python', 'Javascript/jQuery', 'Zope/Plone', 'Wordpress', 'Drupal', 'Joomla', 'Responsive Design', 'User Experience'],
 	'bioPic' : 'images/biopic.jpg',
-}
-
-bio.display = function() {
-	var formattedName = HTMLheaderName.replace('%data%', bio.name);
-	var formattedRole = HTMLheaderRole.replace('%data%', bio.role);
-	var formattedMobile = HTMLmobile.replace('%data%', bio.contacts['mobile']);
-	var formattedEmail = HTMLemail.replace('%data%', bio.contacts['email']).replace('%data%', bio.contacts['email']);
-	var formattedSkype = HTMLcontactGeneric.replace('%contact%','skype').replace('%data%', bio.contacts['skype']);
-	var formattedGithub = HTMLgithub.replace('%data%', bio.contacts['github']).replace('%data%', bio.contacts['github']);
-	var formattedTwitter = HTMLtwitter.replace('%data%', bio.contacts['twitter']).replace('%data%', bio.contacts['twitter']);
-	var formattedPortfolio = HTMLblog.replace('%data%', bio.contacts['blog']).replace('%data%', bio.contacts['blog']);
-	var formattedLocation = HTMLlocation.replace('%data%', bio.contacts['location']);
-	var formattedImage = HTMLbioPic.replace('%data%', bio.bioPic);
-	var formattedMessage = HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage);
-
-	$('#header').append(formattedImage, internationalizeButton);
-	$('#headerTxt').prepend(formattedRole).prepend(formattedName).append(formattedMessage);
-	$('#skills-box').append(HTMLskillsStart);
-	for (var skill=0; skill < bio.skills.length; skill++) {
-		var formattedSkills = HTMLskills.replace('%data%', bio.skills[skill]);
-		$('#skills').append(formattedSkills);
-	};
-	$('#footerContacts').append(formattedMobile,formattedEmail,formattedSkype);
-	$('#footerContacts2').append(formattedGithub, formattedTwitter, formattedPortfolio);
-
-};
-
-bio.display();
-
-/* EDUCATION */
-var education = {
-	'schools' : [
-	{
-		'name' : 'Unieuro - Universidade Euro Americana',
-		'location' : 'Brasília, Brazil',
-		'degree' : 'Bachelor of Science (BS)',
-		'majors' : 'Technology in Interior Design',
-		'dates' : 2008,
-		'url' : 'http://unieuro.edu.br'
 	},
-	{
-		'name' : 'EAFUDI - Agrotechnical School of Uberlândia',
-		'location' : 'Uberlândia, Brazil',
-		'degree' : 'Bachelor of Technology (B.Tech.)',
-		'majors' : 'Computer Technician Course',
-		'dates' : 2003,
-		'url' : 'http://eafudi.gov.br'
-		}],
+	education : {
+		'schools' : [
+		{
+			'name' : 'Front-End Web Developer Nanodegree',
+			'location' : 'Remote',
+			'degree' : 'Nanodegree',
+			'majors' : 'Front-End Web Developer',
+			'dates' : 2016,
+			'url' : 'https://www.udacity.com/course/nd001'
+		},	
+		{
+			'name' : 'Unieuro - Universidade Euro Americana',
+			'location' : 'Brasília, Brazil',
+			'degree' : 'Bachelor of Science (BS)',
+			'majors' : 'Technology in Interior Design',
+			'dates' : 2008,
+			'url' : 'http://unieuro.edu.br'
+		},
+		{
+			'name' : 'EAFUDI - Agrotechnical School of Uberlândia',
+			'location' : 'Uberlândia, Brazil',
+			'degree' : 'Bachelor of Technology (B.Tech.)',
+			'majors' : 'Computer Technician Course',
+			'dates' : 2003,
+			'url' : 'http://eafudi.gov.br'
+			}],
 		'online' : [
 		{
-			'title' : 'Front-End Web Developer Nanodegree',
-			'school' : 'Udacity',
-			'dates' : 2015,
-			'url' : 'https://www.udacity.com/course/nd001'
-		},
+			'title' : 'Shaping up with Angular.js',
+			'school' : 'Code School',
+			'dates' : 2016,
+			'url' : 'https://www.codeschool.com/courses/shaping-up-with-angular-js'
+		},		
 		{
 			'title' : 'Online Advertising',
 			'school' : 'Open2Study by Patty Keegan',
@@ -99,153 +79,220 @@ var education = {
 			'school' : 'Simples Consultoria',
 			'dates' : 2005,
 			'url' : 'http://zope.org'
-			}]
-		};
-
-		education.display = function() {
-			for (var school=0; school < education.schools.length; school++) {
-				var formattedName = HTMLschoolName.replace('%data%', education.schools[school].name).replace('#', education.schools[school].url);
-				var formattedLocation = HTMLschoolLocation.replace('%data%', education.schools[school].location);
-				var formattedDegree = HTMLschoolDegree.replace('%data%', education.schools[school].degree);
-				var formattedMajor = HTMLschoolMajor.replace('%data%', education.schools[school].majors);
-				var formattedDates = HTMLschoolDates.replace('%data%', education.schools[school].dates);
-
-				$('#education').append(HTMLschoolStart);
-				$('.education-entry:last').append(formattedLocation + formattedDates, formattedName + formattedDegree, formattedMajor);
-
-			}
-			for (var course=0; course < education.online.length; course++) {
-				var formattedOnlineTitle = HTMLonlineTitle.replace('%data%', education.online[course].title).replace('#', education.online[course].url);
-				var formattedOnlineSchool = HTMLonlineSchool.replace('%data%', education.online[course].school);
-				var formattedOnlineDates = HTMLonlineDates.replace('%data%', education.online[course].dates);
-
-				$('#online').append(HTMLonlineStart);
-				$('.online-entry:last').prepend(formattedOnlineTitle, formattedOnlineSchool + formattedOnlineDates);
-			}
-		};
-
-		education.display();
-
-/* WORK */
-var work = {
-	'jobs' : [
-	{
-		'employer' : 'Vitamina K',
-		'title' : 'Designer Graphic/Web & Front-End Developer',
-		'location' : 'Brasília, Brazil',
-		'dates' : 'January 2006 - Current',
-		'description' : 'Managing Partner, Freelance Designer Graphic/Web & Front-End Developer.'
-	},
-	{
-		'employer' : 'Chamber of Deputies [Soma Soluções]',
-		'title' : 'Designer Web & Graphic & Plone Developer',
-		'location' : 'Brasília, Brazil',
-		'dates' : 'July 2004 - December 2005',
-		'description' : 'Site Maintenance and Development http://www.plenarinho.gov.br creation of print publications like the Plenarinho Newspaper.'
-	},
-	{
-		'employer' : 'Ministry of Labor and Employment [Politec]',
-		'title' : 'Designer Web & Graphic & Programmer',
-		'location' : 'Brasília, Brazil',
-		'dates' : 'January - July 2004',
-		'description' : 'Creation, layout, photo processing, development of drawings, newspapers, magazines, Maintenance and Development of the Ministry.'
-	},
-	{
-		'employer' : 'WebDaqui',
-		'title' : 'WebDesigner',
-		'location' : 'Brasília, Brazil',
-		'dates' : 'August 2003 - January 2004',
-		'description' : 'Development Sites, Advertisements, Banners.'
-	},
-	{
-		'employer' : 'Bit House Brazil, Jornal O Triângulo & Registro Fotolito',
-		'title' : 'WebDesigner, Editor Graphic & Electronic',
-		'location' : 'Uberlândia, Brazil',
-		'dates' : 'March 1998 - April 2003',
-		'description' : 'Website Development. Desktop publishing: design and layout of the newspaper. Monitoring the entire process of creating the photolithography.'
-	},
-	{
-		'employer' : 'Gráfica Real',
-		'title' : 'Editor & Graphic Design',
-		'location' : 'Patrocínio, Brazil',
-		'dates' : 'February - November 1997',
-		'description' : 'Creation, layout, photo processing, development of drawings, pamphlets, newspapers, magazines.'
 		}]
-	};
-
-	work.display = function() {
-		for (var job=0; job < work.jobs.length; job++) {
-			var formattedEmployer = HTMLworkEmployer.replace('%data%', work.jobs[job].employer);
-			var formattedTitle = HTMLworkTitle.replace('%data%', work.jobs[job].title);
-			var formattedDates = HTMLworkDates.replace('%data%', work.jobs[job].dates);
-			var formattedDescription = HTMLworkDescription.replace('%data%', work.jobs[job].description);
-
-			$('#workExperience').append(HTMLworkStart);
-			$('.work-entry:last').append(formattedEmployer + formattedTitle, formattedDates, formattedDescription);
-		}
-	};
-
-	work.display();
-
-/* PROJECTS */
-var projects = {
-	'project' : [{
-		'title' : 'DB-Beauty Services',
-		'dates' : 'Mai 2015',
-		'description' : 'Graphic Design: Flyer, Ilustrator.',
-		'images' : ['work1']
 	},
-	{
-		'title' : 'Image+ Christmas',
-		'dates' : 'November 2014',
-		'description' : 'Graphic Design: Flyer, Ilustrator.',
-		'images' : ['work2']
-	},
-	{
-		'title' : 'WTS Courses',
-		'dates' : 'July 2014',
-		'description' : 'Graphic Design: Flyer, Ilustrator.',
-		'images' : ['work3']
+	work : {
+		'jobs' : [
+		{
+			'employer' : 'Vitamina K',
+			'title' : 'Managing Partner, Graphic & Web Designer, Front-End Developer',
+			'location' : 'Brasília, Brazil',
+			'dates' : 'January 2006 - Current',
+			'description' : 'Create brands, corporate identity & communications, promotional material, magazines/books/newspapers for a huge variety of products and activities. Customize Themes in Plone, WordPress, Drupal, Joomla and Magento and develop websites layouts determined by technical requirements, present ideas to satisfy and meet customers needs. Perform browser testing and debugging, custom written JavaScript/Scripts/Programming, solve code problems and update websites. Manage projects with creative flair, up-to-date knowledge of industry software and a professional approach to time, costs and deadlines.'
+		},
+		{
+			'employer' : 'Chamber of Deputies [Soma Soluções]',
+			'title' : 'Graphic & Web Designer, Plone Developer',
+			'location' : 'Brasília, Brazil',
+			'dates' : 'July 2004 - December 2005',
+			'description' : 'Developed creative ideas and concepts for plenarinho.gov.br, chose the appropriate media and style to meet objectives in advertising, magazines, posters, exhibitions and corporate identity.'
+		},
+		{
+			'employer' : 'Ministry of Labor and Employment [Politec]',
+			'title' : 'Graphic & Web Designer, PHP Developer',
+			'location' : 'Brasília, Brazil',
+			'dates' : 'January - July 2004',
+			'description' : 'Designed solutions to implement a high visual impact for the mte.gov.br website and all corporate communications.'
+		},
+		{
+			'employer' : 'WebDaqui',
+			'title' : 'WebDesigner',
+			'location' : 'Brasília, Brazil',
+			'dates' : 'August 2003 - January 2004',
+			'description' : 'Created look, layout and features of websites for diverse industries. Designed solutions for advertising, banners, corporate communications and corporate identity.'
+		},
+		{
+			'employer' : 'Bit House Brazil, Jornal O Triângulo & Registro Fotolito',
+			'title' : 'Web Designer, Graphic Designer & Editor',
+			'location' : 'Uberlândia, Brazil',
+			'dates' : 'March 1998 - April 2003',
+			'description' : 'Developed sites structure, design and page templates. Executed editorial decisions with timeliness and precision. Maintained clear and constructive communication. Monitored the entire process of photolithography. '
+		},
+		{
+			'employer' : 'Gráfica Real',
+			'title' : 'Graphic Designer & Editor',
+			'location' : 'Patrocínio, Brazil',
+			'dates' : 'February - November 1997',
+			'description' : 'Printed and photo processed design solutions such as flyers, advertising, books, newspapers, magazines, posters, product packaging, displays and corporate communications.'
 		}]
-	};
-
-	projects.display = function(){
-		for (var item=0; item < projects.project.length; item++) {
-			$('#projects').append(HTMLprojectStart);
-			var formattedTitle = HTMLprojectTitle.replace('%data%', projects.project[item].title);
-			var formattedDates = HTMLprojectDates.replace('%data%', projects.project[item].dates);
-			var formattedDescription = HTMLprojectDescription.replace('%data%',projects.project[item].description);
-
-			$('.project-entry:last').append(formattedDates, formattedTitle);
-
-			for (var image=0; image < projects.project[item].images.length; image++) {
-				// I would like to use something smarter that could replace all the strings once
-				var formattedImage = HTMLprojectImage.replace('%data%', projects.project[item].images[image]).replace('%data%', projects.project[item].images[image]).replace('%data%', projects.project[item].images[image]).replace('%data%', projects.project[item].images[image]).replace('%data%', projects.project[item].images[image]).replace('%data%', projects.project[item].images[image]);
-				//console.log(formattedImage);
-				$('.project-entry:last').append(formattedImage);
-			};
-			$('.project-entry:last').append(formattedDescription);
-		}
-	};
-	projects.display();
-
-
-/* OTHERS */
-
-function inName(name){
-	//console.log(name);
-	var newName = name;
-	var firstName = newName.split(' ')[0];
-	var lastName = newName.split(' ')[1];
-
-	if (lastName == lastName.toUpperCase()) {
-		newName = firstName + ' ' + lastName.charAt(0).toUpperCase() + lastName.slice(1).toLowerCase();
-		$('#btInt').text('Internationalize');
-	} else {
-		newName = firstName + ' ' + lastName.toUpperCase();
-		$('#btInt').text('Undo');
-	}
-	return newName;
+	},
+	projects : {
+		'project' : [{
+			'title' : 'DB-Beauty Services',
+			'dates' : 'Mai 2015',
+			'description' : 'Graphic Design: Flyer, Ilustrator.',
+			'images' : ['work1']
+		},
+		{
+			'title' : 'Image+ Christmas',
+			'dates' : 'November 2014',
+			'description' : 'Graphic Design: Flyer, Ilustrator.',
+			'images' : ['work2']
+		},
+		{
+			'title' : 'WTS Courses',
+			'dates' : 'July 2014',
+			'description' : 'Graphic Design: Flyer, Ilustrator.',
+			'images' : ['work3']
+		}]
+	}		
+	
+	
+		
 };
 
-$('#mapDiv').append(googleMap);
+// Controller
+var controller = {
+    init: function() {
+        // set our current cat to the first one in the list
+        bio = model.bio;
+		education = model.education;
+		work = model.work;
+		projects = model.projects;
+		
+        // tell our views to initialize
+        bioView.init();
+		
+		for (var school=0; school < education.schools.length; school++) {
+			educationView.initSchool(education.schools[school]);
+		}
+		
+		for (var course=0; course < education.online.length; course++) {
+			educationView.initCourse(education.online[course]);
+		}
+		
+		for (var job=0; job < work.jobs.length; job++) {
+			workView.init(work.jobs[job]);
+		}
+		
+		for (var item=0; item < projects.project.length; item++) {		
+			projectView.init(projects.project[item]);
+		}
+	
+        mapView.init();		
+				
+    },
+};
+
+// View
+var bioView = {
+	init: function() {
+		this.formattedName = HTMLheaderName.replace('%data%', bio.name);
+		this.formattedRole = HTMLheaderRole.replace('%data%', bio.role);
+		this.formattedMobile = HTMLmobile.replace('%data%', bio.contacts['mobile']);
+		this.formattedEmail = HTMLemail.replace('%data%', bio.contacts['email']).replace('%data%', bio.contacts['email']);
+		this.formattedSkype = HTMLcontactGeneric.replace('%contact%','skype').replace('%data%', bio.contacts['skype']);
+		this.formattedGithub = HTMLgithub.replace('%data%', bio.contacts['github']).replace('%data%', bio.contacts['github']);
+		this.formattedTwitter = HTMLtwitter.replace('%data%', bio.contacts['twitter']).replace('%data%', bio.contacts['twitter']);
+		this.formattedPortfolio = HTMLblog.replace('%data%', bio.contacts['blog']).replace('%data%', bio.contacts['blog']);
+		this.formattedLocation = HTMLlocation.replace('%data%', bio.contacts['location']);
+		this.formattedImage = HTMLbioPic.replace('%data%', bio.bioPic);
+		this.formattedMessage = HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage);
+		this.formattedSkills = "";
+		for (var skill=0; skill < bio.skills.length; skill++) {
+			this.formattedSkills += HTMLskills.replace('%data%', bio.skills[skill]);
+		};		
+
+        this.render();	
+	},
+
+	render: function() {
+		$('#header').append(this.formattedImage, internationalizeButton);
+		$('#headerTxt').prepend(this.formattedRole).prepend(this.formattedName).append(this.formattedMessage);
+		$('#skills-box').append(HTMLskillsStart);
+		$('#skills').append(this.formattedSkills);
+		$('#footerContacts').append(this.formattedMobile, this.formattedEmail, this.formattedSkype);
+		$('#footerContacts2').append(this.formattedGithub, this.formattedTwitter, this.formattedPortfolio);
+	},	
+};
+
+var educationView = {	
+	initSchool: function(data) {
+		this.formattedName = HTMLschoolName.replace('%data%', data.name).replace('#', data.url);
+		this.formattedLocation = HTMLschoolLocation.replace('%data%', data.location);
+		this.formattedDegree = HTMLschoolDegree.replace('%data%', data.degree);
+		this.formattedMajor = HTMLschoolMajor.replace('%data%', data.majors);
+		this.formattedDates = HTMLschoolDates.replace('%data%', data.dates);
+		
+        this.renderSchool();				
+	},
+
+	renderSchool: function() {
+		$('#education').append(HTMLschoolStart);
+		$('.education-entry:last').append(this.formattedLocation + this.formattedDates, this.formattedName + this.formattedDegree, this.formattedMajor);
+	},	
+	
+	initCourse: function(data) {
+		this.formattedOnlineTitle = HTMLonlineTitle.replace('%data%', data.title).replace('#', data.url);
+		this.formattedOnlineSchool = HTMLonlineSchool.replace('%data%', data.school);
+		this.formattedOnlineDates = HTMLonlineDates.replace('%data%', data.dates);
+		
+        this.renderCourse();						
+	},	
+
+	renderCourse: function() {
+		$('#online').append(HTMLonlineStart);
+		$('.online-entry:last').prepend(this.formattedOnlineTitle, this.formattedOnlineSchool + this.formattedOnlineDates);
+	},	
+};
+
+var workView = {
+	init: function(data) {	
+		this.formattedEmployer = HTMLworkEmployer.replace('%data%', data.employer);
+		this.formattedTitle = HTMLworkTitle.replace('%data%', data.title);
+		this.formattedDates = HTMLworkDates.replace('%data%', data.dates);
+		this.formattedDescription = HTMLworkDescription.replace('%data%', data.description);
+
+        this.render();	
+	},
+
+	render: function() {
+		$('#workExperience').append(HTMLworkStart);
+		$('.work-entry:last').append(this.formattedEmployer + this.formattedTitle, this.formattedDates, this.formattedDescription);
+	},	
+};
+
+var projectView = {
+	init: function(data) {	
+		this.formattedTitle = HTMLprojectTitle.replace('%data%', data.title);
+		this.formattedDates = HTMLprojectDates.replace('%data%', data.dates);
+		this.formattedDescription = HTMLprojectDescription.replace('%data%', data.description);
+		for (var image=0; image < data.images.length; image++) {
+			this.formattedImage = HTMLprojectImage.replace(new RegExp('%data%', 'g'), data.images[image]);
+		};
+		
+        this.render();	
+	},
+
+	render: function() {
+		$('#projects').append(HTMLprojectStart);
+		$('.project-entry:last').append(this.formattedDates, this.formattedTitle);
+		$('.project-entry:last').append(this.formattedImage);
+		$('.project-entry:last').append(this.formattedDescription);
+	},	
+};
+
+var mapView = {
+	init: function() {			
+        this.render();	
+	},
+
+	render: function() {
+		$('#mapDiv').append(googleMap);
+	},	
+};
+
+
+
+// make it go!
+controller.init();
